@@ -1,0 +1,473 @@
+html {
+  scroll-behavior: smooth;
+}
+
+ 
+.social_icon .social-icon:hover {
+    color: #00bfae; /* Ganti dengan warna hover yang diinginkan */
+    transition: color 0.3s ease;
+  }
+
+ /* Membuat map container responsif */
+.responsive-map iframe {
+    width: 100%;
+    height: 450px;  /* Menyesuaikan tinggi peta */
+    max-width: 100%;  /* Membatasi lebar iframe agar tidak melebihi 100% dari kontainer */
+    border: 0;
+  }
+  
+  /* Styling untuk bagian informasi kontak */
+  .contact-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .contact-info ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .contact-info ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+  
+  .contact-info a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Styling untuk bagian sosial media */
+  .social-media h4 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  
+  .social-media ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .social-media ul li {
+    margin-bottom: 5px;
+  }
+  
+  .social-media ul li a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .social-media ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Pengaturan untuk layout responsif */
+  @media (max-width: 768px) {
+    .section_tittle h2 {
+      font-size: 1.5rem;
+    }
+  
+    .responsive-map iframe {
+      height: 300px;  /* Menurunkan tinggi peta di layar kecil */
+    }
+  
+    .contact-info h3 {
+      font-size: 1.5rem;
+    }
+  
+    .contact-info ul li {
+      font-size: 1rem;
+    }
+  }
+
+  
+  /* Styling untuk card */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .card .btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Menyesuaikan ukuran card pada perangkat mobile */
+  @media (max-width: 768px) {
+    .card {
+      margin-bottom: 15px;  /* Memberikan jarak antar card */
+    }
+  
+    .contact-info h3 {
+      font-size: 1.5rem;
+    }
+  
+    .card-title {
+      font-size: 1.1rem;
+    }
+  
+    .card-text {
+      font-size: 0.95rem;
+    }
+  }
+  
+  .single_food_item .btn-wrap {
+    margin: auto;
+    padding: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Agar elemen bisa turun ke baris baru jika ruang tidak cukup */
+  }
+  .single_food_item h5 {
+    margin-bottom: 10px;
+    font-size: 16px; /* Menyesuaikan ukuran font untuk layar kecil */
+  }
+  .single_food_item a {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 14px; /* Menyesuaikan ukuran tombol untuk layar kecil */
+  }
+
+  .single_food_item img {
+    width: 100px; /* Sesuaikan dengan ukuran yang diinginkan */
+    height: 100px; /* Sesuaikan dengan ukuran yang diinginkan */
+    object-fit: cover; /* Pastikan gambar tidak terdistorsi */
+    border-radius: 8px; /* Opsional, tambahkan sudut melengkung jika perlu */
+}
+
+
+  /* Media Query untuk layar kecil */
+  @media (max-width: 768px) {
+    .single_food_item .btn-wrap {
+      justify-content: center; /* Menempatkan elemen di tengah */
+      text-align: center;
+    }
+    .single_food_item h5 {
+      width: 100%; /* Harga berada di baris baru */
+      text-align: center;
+      margin-bottom: 5px; /* Mengurangi jarak */
+    }
+    .single_food_item a {
+      width: 100%; /* Tombol memenuhi lebar penuh */
+      text-align: center;
+    }
+  }
+
+
+  /* data tables */   
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+  }
+  .container {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  .add-order-btn {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  #transaksiTable_wrapper {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .table-responsive {
+    overflow-x: auto;
+  }
+  table.dataTable {
+    border-collapse: collapse !important;
+    border: 2px solid #ddd !important;
+    width: 100% !important;
+  }
+  table.dataTable thead th {
+    background-color: #fdd0be;
+    color: #000;
+    text-align: center;
+  }
+  table.dataTable tbody td {
+    text-align: center;
+    vertical-align: middle;
+  }
+  .product-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  .table-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Menambahkan jarak antar tombol */
+  }
+  @media (max-width: 576px) {
+    .add-order-btn {
+      justify-content: center;
+    }
+  }
+ 
+/* Navbar Utama */
+.main_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 5px 0; /* Mengurangi padding untuk memperkecil tinggi */
+  max-height: 20%; /* Membatasi tinggi maksimal */
+  overflow: hidden; /* Mencegah konten berlebih keluar */
+}
+
+
+.navbar-nav {
+  display: flex;
+  gap: 15px; /* Jarak antar item menu */
+  align-items: center;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #e55a21; /* Warna saat hover */
+}
+
+/* Search Wrapper */
+#searchWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Jarak antara input, tombol pencarian, dan tombol logout */
+  width: 40%;
+  max-width: 700px; /* Batas maksimal lebar */
+}
+
+/* Kolom Pencarian */
+#searchForm {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 10px; /* Jarak antara input dan tombol */
+}
+
+#searchForm input {
+  flex: 1;
+  border-radius: 30px;
+  padding: 10px 20px;
+  border: 2px solid #ff6426;
+}
+
+#searchForm input:focus {
+  border-color: #e55a21;
+  outline: none;
+}
+
+#searchForm button {
+  border-radius: 30px;
+  padding: 10px 20px;
+  background-color: white;
+  color: #ff6426;
+  border: 2px solid #ff6426;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+#searchForm button:hover {
+  background-color: #ff6426;
+  color: white;
+  border-color: #e55a21;
+}
+
+/* Tombol Logout */
+#searchWrapper a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: 2px solid #ff6426;
+  color: #ff6426;
+  background-color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#searchWrapper a:hover {
+  background-color: #ff6426;
+  color: white;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  #searchWrapper {
+    width: 80%; /* Lebar penuh pada layar kecil */
+  }
+  #searchForm {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  #searchWrapper {
+    flex-direction: column; /* Elemen ditumpuk secara vertikal */
+    gap: 10px;
+  }
+  #searchForm {
+    width: 80%;
+  }
+}
+
+
+
+button.btn-outline-secondary {
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white; /* Warna latar tombol logout */
+  color: #ff6426;
+  border: 2px solid #ff6426; /* Border pada tombol logout */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+button.btn-outline-secondary:hover {
+  background-color: #ff6426; /* Warna latar saat hover */
+  color: white;
+  border-color: #e55a21;
+}
+
+.modal-header {
+  background-color: #ff6426;
+  color: #fff;
+}
+
+.modal-footer button {
+  background-color: white; /* Warna latar tombol logout */
+  color: #ff6426;
+  border: 2px solid #ff6426; /* Border tombol logout */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.modal-footer button:hover {
+  background-color: #ff6426; /* Warna latar saat hover */
+  color: white;
+  border-color: #e55a21;
+}
+
+
+.menu_btn a {
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: #fff;
+  background-color: white; /* Warna tombol lainnya */
+}
+
+.menu_btn a:hover {
+  background-color: #e55a21; /* Warna hover tombol lainnya */
+}
+
+.login_btn {
+  border-radius: 30px;
+}
+
+.login_btn a {
+  display: inline-block; /* Menjadikan elemen a terlihat seperti tombol */
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: black; /* Warna teks default */
+  text-decoration: none; /* Menghilangkan garis bawah pada teks */
+  background-color: white; /* Warna tombol default */
+  border: 2px solid #e55a21; /* Border warna #e55a21 */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Animasi transisi */
+}
+
+.login_btn a:hover {
+  background-color: #e55a21; /* Warna tombol saat hover */
+  color: white !important; /* Warna teks saat hover, menggunakan !important untuk memastikan tidak tertimpa */
+  border-color: #e55a21; /* Tetap menggunakan warna border #e55a21 saat hover */
+}
+
+
+
+@media (max-width: 768px) {
+  .main_menu .row {
+    flex-wrap: nowrap;
+  }
+
+  form.d-flex {
+    width: 70%;
+  }
+
+  button.btn-outline-secondary {
+    margin-left: 10px;
+  }
+}
+
+.selectpicker {
+  width: 100%;
+}
+
+#cartList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#cartList li .remove-item {
+  color: red;
+  cursor: pointer;
+}
+
+ 
+/* Section Kontainer */
+section.container {
+  max-height: 75vh; /* Membatasi tinggi section maksimal 75% dari viewport */ 
+  margin-top: 130px; /* Tambahkan margin bawah untuk memberi ruang */
+}
+
+/* Tabel di dalam Section */
+section .table {
+  margin-bottom: 0; /* Hilangkan margin bawah pada tabel */
+}
+
+/* Tombol Aksi */
+section .card-body .btn {
+  min-width: 120px; /* Memberikan ukuran tombol agar konsisten */
+}
+
+  
